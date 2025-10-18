@@ -1,0 +1,38 @@
+---
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+permissions:
+  contents: read
+  deployments: write
+  pull-requests: write
+
+jobs:
+  lint:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+      - name: Setup UV
+        uses: astral-sh/setup-uv@557e51de59eb14aaaba2ed9621916900a91d50c6
+        with:
+          version-file: "pyproject.toml"
+      - name: Lint
+        run: uv run ruff check
+
+  type:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+      - name: Setup UV
+        uses: astral-sh/setup-uv@557e51de59eb14aaaba2ed9621916900a91d50c6
+        with:
+          version-file: "pyproject.toml"
+      - name: Lint
+        run: uv run pyright
