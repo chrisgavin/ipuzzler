@@ -1,0 +1,17 @@
+[project]
+name = "ipuzzler"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "numpy>=2.3.4",
+    "pillow>=12.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.406",
+    "ruff>=0.14.1",
+]
+
+[tool.uv]
+required-version = ">=0.8.4"
