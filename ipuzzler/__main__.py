@@ -44,7 +44,7 @@ def main():
 
 	print("Enter clues. Ctrl-D to end:")
 	errors = []
-	current_direction = puzzle.clues.across
+	current_direction = puzzle.clues.Across
 	current_clue = None
 	while True:
 		try:
@@ -52,10 +52,10 @@ def main():
 		except EOFError:
 			break
 		if clue.strip().lower() == "across":
-			current_direction = puzzle.clues.across
+			current_direction = puzzle.clues.Across
 			continue
 		if clue.strip().lower() == "down":
-			current_direction = puzzle.clues.down
+			current_direction = puzzle.clues.Down
 			continue
 
 		if current_clue is None:

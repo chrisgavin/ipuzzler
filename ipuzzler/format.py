@@ -14,8 +14,8 @@ class Clue():
 
 @dataclasses.dataclass
 class Clues():
-	across:typing.List[Clue] = dataclasses.field(default_factory=list)
-	down:typing.List[Clue] = dataclasses.field(default_factory=list)
+	Across:typing.List[Clue] = dataclasses.field(default_factory=list)
+	Down:typing.List[Clue] = dataclasses.field(default_factory=list)
 
 @dataclasses.dataclass
 class IPUZCrosswordFile():
