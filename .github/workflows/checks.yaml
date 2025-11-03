@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout
-        uses: actions/checkout@ff7abcd0c3c05ccf6adc123a8cd1fd4fb30fb493
+        uses: actions/checkout@71cf2267d89c5cb81562390fa70a37fa40b1305e
       - name: Setup UV
         uses: astral-sh/setup-uv@0d20755a2389f8ddbd3ad4f8a536309a4db22de9
         with:
@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout
-        uses: actions/checkout@ff7abcd0c3c05ccf6adc123a8cd1fd4fb30fb493
+        uses: actions/checkout@71cf2267d89c5cb81562390fa70a37fa40b1305e
       - name: Setup UV
         uses: astral-sh/setup-uv@0d20755a2389f8ddbd3ad4f8a536309a4db22de9
         with:
