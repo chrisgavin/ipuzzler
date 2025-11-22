@@ -57,6 +57,8 @@ def main():
 		if clue.strip().lower() == "down":
 			current_direction = puzzle.clues.Down
 			continue
+		if clue.strip() == "":
+			continue
 
 		if current_clue is None:
 			number = clue.split(" ")[0]
