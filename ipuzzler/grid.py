@@ -37,7 +37,7 @@ def annotate_grid(grid: typing.List[typing.List[bool]]) -> typing.List[typing.Li
 
 def image_to_grid(image_path: pathlib.Path, width:int, height:int) -> typing.List[typing.List[bool]]:
 	image = PIL.Image.open(image_path).convert("L")
-	lookup_table = [0 if i <= 128 else 255 for i in range(256)]
+	lookup_table = [0 if i <= 64 else 255 for i in range(256)]
 	image = image.point(lookup_table)
 	image_data = numpy.array(image)
 
