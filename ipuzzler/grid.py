@@ -41,15 +41,15 @@ def image_to_grid(image_path: pathlib.Path, width:int, height:int) -> typing.Lis
 	image = image.point(lookup_table)
 	image_data = numpy.array(image)
 
-	cell_width = image_data.shape[1] // width
-	cell_height = image_data.shape[0] // height
+	cell_width = image_data.shape[1] / width
+	cell_height = image_data.shape[0] / height
 	cells = []
 	for y in range(height):
 		row = []
 		for x in range(width):
 			cell_data = image_data[
-				y * cell_height : (y + 1) * cell_height,
-				x * cell_width : (x + 1) * cell_width,
+				int((y + 0.25) * cell_height) : int((y + 0.75) * cell_height),
+				int((x + 0.25) * cell_width) : int((x + 0.75) * cell_width),
 			]
 			black_pixel_count = numpy.sum(cell_data == 0)
 			total_pixel_count = cell_data.size
