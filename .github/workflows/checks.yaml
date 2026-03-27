@@ -19,7 +19,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@0c366fd6a839edf440554fa01a7085ccba70ac98
       - name: Setup UV
-        uses: astral-sh/setup-uv@5c62c5926145985eec91f09e2e0a75f40daed929
+        uses: astral-sh/setup-uv@447e6d02b15d65b3247cce2d6019f11957285d11
         with:
           version-file: "pyproject.toml"
       - name: Lint
@@ -31,7 +31,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@0c366fd6a839edf440554fa01a7085ccba70ac98
       - name: Setup UV
-        uses: astral-sh/setup-uv@5c62c5926145985eec91f09e2e0a75f40daed929
+        uses: astral-sh/setup-uv@447e6d02b15d65b3247cce2d6019f11957285d11
         with:
           version-file: "pyproject.toml"
       - name: Lint
